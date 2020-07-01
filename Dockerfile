@@ -1,4 +1,4 @@
 FROM busybox:latest
-WORKDIR /opt/logs
+COPY README.md README.md
 RUN cat README.md
 CMD while :; do sleep 1; done & kill -STOP $! && wait $!
